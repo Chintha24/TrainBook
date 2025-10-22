@@ -46,7 +46,7 @@ jobs:
           curl -v --fail -u "${{ secrets.TOMCAT_PREPROD_USER }}:${{ secrets.TOMCAT_PREPROD_PASSWORD }}" \
           -T target/TrainBook-1.0.0-SNAPSHOT.war \
           "http://${{ secrets.TOMCAT_PREPROD_HOST }}/manager/text/deploy?path=/TrainBook&update=true"
-
+          
       - name: Deploy to Prod
         run: |
           curl -v --fail -u "${{ secrets.TOMCAT_PROD_USER }}:${{ secrets.TOMCAT_PROD_PASSWORD }}" \
